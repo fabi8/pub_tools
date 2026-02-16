@@ -1,0 +1,14 @@
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+# Configure word boundaries to treat / as separator
+$if Bash
+    # Ctrl+Backspace - delete previous word (try multiple sequences)
+    "\C-h": unix-filename-rubout
+    
+    # Ctrl+Up Arrow - insert "../" (parent directory)
+    "\e[1;5A": "../"
+
+    # Ctrl+f - surounds the search querry (e.g. x*.cpp) with properly escaped command lsr
+    "\C-f": "\C-alsr \"*\C-e*\""
+$endif

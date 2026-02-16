@@ -1,0 +1,16 @@
+[user]
+	name = Martin Fabian
+	email = martin.fabian.fbi@gmail.com
+[alias]
+	adog = log --decorate --oneline --graph
+	c = checkout
+	s = status
+	lg = log --color=always --graph --abbrev-commit --decorate --format=format:'%C(dim red)%h%C(reset) %C(dim blue)%an%C(reset) %C(auto)%d%C(reset) %C(white)%s%C(reset) %C(dim yellow)(%ar)%C(reset)'
+	lga = lg --all
+
+[diff "hex"]
+	textconv = xxd
+	binary = true
+	
+[core]
+	longpaths = true

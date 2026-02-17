@@ -1,17 +1,28 @@
 if [ ! -f ~/.fzf.bash ]; then
-    # Clone the repo and install
-    pushd ~
-    if [ ! -d .fzf ]; then
-        echo "Cloning fzf into director $PWD"
-        git clone https://github.com/junegunn/fzf.git
-    else
-        pushd .fzf
-        git pull
-        popd
-    fi
-    echo "Calling fzf install"
-    .fzf/install
-    popd
+    echo "fzf is not installed."
+    read -p "Install fzf now? [y/N]: " _fzf_ans
+    case "$_fzf_ans" in
+        [Yy]*)
+            # Clone the repo and install
+            pushd ~
+            if [ ! -d .fzf ]; then
+                echo "Cloning fzf into director $PWD"
+                git clone https://github.com/junegunn/fzf.git
+            else
+                pushd .fzf
+                echo "Updating the fzf $PWD"
+                git pull
+                popd
+            fi
+            echo "Calling fzf install"
+            .fzf/install
+            popd
+            ;;
+        *)
+            echo "Skipping fzf installation; fzx and completions will not work."
+            return 0 2>/dev/null || exit 0
+            ;;
+    esac
 fi
 # Load the fzf
 source ~/.fzf.bash

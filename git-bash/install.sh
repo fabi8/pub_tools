@@ -36,7 +36,7 @@ for file in "$_2Profile_dir"/.*; do
     echo 'source '"$file" >> ~/.profile
 done
 
-# Add bookmark of this repository
+log_info "Adding bookmark drepo_gitbash"
 echo "drepo_gitbash=$_this_repo_dir" >> ~/.profile
 
 echo $bash_config_end_tag >> ~/.profile

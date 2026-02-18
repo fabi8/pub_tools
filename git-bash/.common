@@ -1,3 +1,35 @@
+# Check if to show the banner
+mode=0
+while [ "$#" -gt 0 ]; do
+  case "$1" in
+    --show)
+      mode=1
+      ;;
+  esac
+  shift
+done
+
+# Common Paths
+
+# plugins_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/../plugins" && pwd)"
+_this_repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )"
+export _this_repo_dir
+
+_plugins_dir="$_this_repo_dir/plugins" 
+mkdir -p $_plugins_dir
+export _plugins_dir
+
+_include_dir="$_this_repo_dir/include" 
+export _include_dir
+
+_2home_dir="$_this_repo_dir/2home" 
+export _2home_dir
+
+_2Profile_dir="$_this_repo_dir/2Profile" 
+export _2Profile_dir
+
+# Common Logger
+
 RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
@@ -9,6 +41,8 @@ log_info()    { echo -e "${BLUE}[INFO]${NC} $*"; }
 log_success() { echo -e "${GREEN}[OK]${NC} $*"; }
 log_warn()    { echo -e "${YELLOW}[WARN]${NC} $*"; }
 log_error()   { echo -e "${RED}[ERROR]${NC} $*"; }
+
+# Jokes
 
 banner() {
 echo -e "${CYAN}"
@@ -70,9 +104,10 @@ MARK() {
 #################################################
 # Print header
 
-clear
-banner
-log_error "$(curl -s https://icanhazdadjoke.com/ -H "Accept: text/plain")"
-
+if [ "$mode" -eq 1 ]; then
+  clear
+  banner
+  log_error "$(curl -s https://icanhazdadjoke.com/ -H "Accept: text/plain")"
+fi
 
 

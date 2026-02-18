@@ -1,6 +1,6 @@
 # How to use this
 Use collect.sh to get new files from system for commit.
-Use install.sh to install the files. Do not move ./include afterwards.
+Use install.sh to install the files.
 
 # Known issues
 * grepx.exe requires a ton of dependencies :(

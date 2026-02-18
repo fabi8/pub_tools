@@ -1,4 +1,4 @@
-source .common
+source "$(dirname "${BASH_SOURCE[0]}")/../.common" --show
 
 log_info "To find more serious info about this madness type 'helpx'"
 helpx()

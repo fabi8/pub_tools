@@ -28,6 +28,12 @@ export _2home_dir
 _2Profile_dir="$_this_repo_dir/2Profile" 
 export _2Profile_dir
 
+# Common Vars
+
+_bash_config_start_tag="#START_BASH_CONFIG"
+_bash_config_end_tag="#END_BASH_CONFIG"
+_backup_extension=".gitbash.backup"
+
 # Common Logger
 
 RED='\033[0;31m'

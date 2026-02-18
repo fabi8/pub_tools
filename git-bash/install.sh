@@ -1,7 +1,6 @@
 # This lines allow to run the script like this '. ./bla/bla/install.sh'
 source "$(dirname "${BASH_SOURCE[0]}")/.common"
 
-# Starting
 log_info "Starting to copy files into the home."
 cp -v $_2home_dir/.* ~
 
@@ -15,7 +14,6 @@ else
     touch ~/.profile
 fi
 
-# Remove previous configuration
 log_info "  Removing previous configuration."
 sed -i "/${bash_config_start_tag}/,/${bash_config_end_tag}/d" ~/.profile
 
@@ -31,12 +29,15 @@ else
     echo 'export PATH' >> ~/.profile
     log_info "  Added the $_include_dir into the PATH by the .profile."
 fi
-# Source our fancy bash profile from git location for better convenience
 
+# Source our fancy scripts each time git-bash is opened
 for file in "$_2Profile_dir"/.*; do
     [ -f "$file" ] || continue
     echo 'source '"$file" >> ~/.profile
 done
+
+# Add bookmark of this repository
+echo "drepo_gitbash=$_this_repo_dir" >> ~/.profile
 
 echo $bash_config_end_tag >> ~/.profile
 

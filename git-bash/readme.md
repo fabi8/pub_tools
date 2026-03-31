@@ -12,3 +12,4 @@ Use install.sh to install the files.
 * Missing cmd mklink /J. Make bash function for it please.
 * 'o' could change directory to the paramerer before it runs it.
 * There could be one command instead of 3 - "s o w" 
+* Add support for wsl

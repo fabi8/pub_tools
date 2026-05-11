@@ -1,5 +1,13 @@
 source "$(dirname "${BASH_SOURCE[0]}")/../.common"
 
+fzf_helpx(){
+    if [ -f $_plugins_dir/.fzf.bash ]; then
+        echo "----- FZF -----"
+        echo " fzx                    - Fuzzy search in the piped input. E.g. 'g lga | fzx'"
+        echo " ctrl+t                 - Fuzzy search for path in current directory."
+    fi
+}
+
 if [ ! -f $_plugins_dir/.fzf.bash ]; then
     read -p "Install fzf now? [y/N]: " _fzf_ans
     case "$_fzf_ans" in

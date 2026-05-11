@@ -11,3 +11,4 @@ Use install.sh to install the files.
 * 'o' could change directory to the paramerer before it runs it.
 * There could be one command instead of 3 - "s o w" 
 * Add support for wsl
+* Add commands "plugin-list" "plugin-install <name>" "plugin-uninstall <name>" and rework the fzf installation. It is quite hard to follow.

@@ -35,6 +35,8 @@ helpx()
     echo " sudo [command]       - runs the command in the elevated git-bash"
     echo " cpx                  - copy output to clipboard 'ls | cpx'"
     echo " cpxr                 - copy file to clipboard 'cpxr ./file.txt'"
+    echo "===== Plugins ====="
+    fzf_helpx
 }
 #################
 # Common functions

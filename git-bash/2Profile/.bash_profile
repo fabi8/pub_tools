@@ -21,6 +21,7 @@ helpx()
     echo "===== Dir Other ====="
     echo " wp                   - converts to windows path"
     echo " up                   - converts to unix path"
+    echo " mklink               - wrapper for the mklink M$ cmd"
     echo " reset_total_commander_shortcuts"
     echo " reset_file_explorer_shortcuts"
     echo "===== Start/open files ====="

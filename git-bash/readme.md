@@ -5,6 +5,7 @@ Use install.sh to install the files.
 # Known issues
 * grepx.exe requires a ton of dependencies :(
 * reset_total_commander_shortcuts - not working with new installation of TC. The config file is in different location.
+* cpx : when the piped input or input from the parameter contains backslashes or quotes, it interfere with bash and in the clipboard ends up with unexpected result
 
 # New ideas
 * Command for copy file/folder out of clipboard would be nice.

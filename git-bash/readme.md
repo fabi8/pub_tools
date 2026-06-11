@@ -8,8 +8,11 @@ Use install.sh to install the files.
 * cpx : when the piped input or input from the parameter contains backslashes or quotes, it interfere with bash and in the clipboard ends up with unexpected result
 
 # New ideas
-* Command for copy file/folder out of clipboard would be nice.
+* cpxr: could by default copy onedrive link, if the file passed is located in onedrive
 * 'o' could change directory to the paramerer before it runs it.
 * There could be one command instead of 3 - "s o w" 
-* Add support for wsl
+
 * Add commands "plugin-list" "plugin-install <name>" "plugin-uninstall <name>" and rework the fzf installation. It is quite hard to follow.
+
+* Command for copy file/folder out of clipboard would be nice.
+* Add support for wsl

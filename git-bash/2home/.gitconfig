@@ -1,6 +1,6 @@
 [user]
 	name = Martin Fabian
-	email = martin.fabian.fbi@gmail.com
+	email = martin.fabian@honeywellaerospace.com
 [alias]
 	adog = log --decorate --oneline --graph
 	c = checkout

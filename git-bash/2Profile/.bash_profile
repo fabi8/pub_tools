@@ -120,14 +120,12 @@ pu(){
     if [ -z "$*" ]; then
         pushd
     else
-    pushd "$(up "$*")"
+        pushd "$*"
     fi
-    l
 }
 
 po(){
     popd
-    l
 }
 
 c(){
@@ -191,7 +189,7 @@ cpx(){
         # Copy whole pipe input
         str=$(cat)
     fi
-        powershell scb "\"$str"\"
+    powershell scb "\"$str"\"
     num=${#str}
     echo "$num characters copied to text clipboard"
 }

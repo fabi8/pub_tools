@@ -16,3 +16,4 @@ Use install.sh to install the files.
 
 * Command for copy file/folder out of clipboard would be nice.
 * Add support for wsl
+* Add support of the onedrive. Especially command which will return URL of path.

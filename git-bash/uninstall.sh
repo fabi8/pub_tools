@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 source "$(dirname "${BASH_SOURCE[0]}")/.common"
 set -x
 if [ -f ~/.profile ]; then
@@ -16,4 +17,6 @@ for file in ~/*$_backup_extension; do
 done
 eval "$old_dotglob"
 
+log_info "Removing the plugin dir"
+rm -rf ./plugins
 log_success "If no errors visible, uninstall complete. See you!"

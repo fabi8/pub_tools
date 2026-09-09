@@ -140,8 +140,8 @@ _cleanup_on_exit() {
 trap _cleanup_on_exit EXIT
 
 # Restore the directories on start
-if [ -f ~/.pushd-cache ] && [ "$(dirs -p | wc -l)" -le 1 ]; then
-    # Only restore if the current directory stack is empty (protection from resourcing the file)
+if [ -f ~/.pushd-cache ]; then
+    dirs -c
     it=0
     while IFS= read -r dir; do
         if [ -d "$dir" ]; then

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # This lines allow to run the script like this '. ./bla/bla/install.sh'
 source "$(dirname "${BASH_SOURCE[0]}")/.common"
 

@@ -17,3 +17,20 @@ Use install.sh to install the files.
 * Command for copy file/folder out of clipboard would be nice.
 * Add support for wsl
 * Add support of the onedrive. Especially command which will return URL of path.
+
+* VIMX: Add configuration witch will allow this use case:
+    * run any command
+    * run vimx
+        * it will open vim over stdout of the previous command
+    * close vimx (by closing vim)
+    
+    * upon closing vimx, on the terminal would remain text you left in vimx
+
+    * Exmaple:
+        * $ ls
+            * it will behave normally
+        * $ vimx 
+            * this will open vim with the text from the the last stdout
+            * user edits this text into <some_string> and close the vimx
+        * $ <some_string>
+            * this will appear automatically, without copying from clipboard or anything

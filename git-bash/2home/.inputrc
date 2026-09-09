@@ -9,6 +9,9 @@ $if Bash
     # Ctrl+Up Arrow - insert "../" (parent directory)
     "\e[1;5A": "../"
 
+    # Ctrl+Down Arrow - inserts "| vim -" to open the output in vim
+    "\e[1;5B": " | vim -"
+
     # Ctrl+f - surounds the search querry (e.g. x*.cpp) with properly escaped command lsr
     "\C-f": "\C-alsr \"*\C-e*\""
 $endif

@@ -32,6 +32,7 @@ helpx()
     echo " g                    - alias for git"
     echo " ps1_toggle           - removes slow git scripts from ps1"
     echo " grepx                - searching in excels"
+    echo " path_to_url          - converting local path to url, if the path is synced on onedrive"
     echo " sudo [command]       - runs the command in the elevated git-bash"
     echo " cpx                  - copy output to clipboard 'ls | cpx'"
     echo " cpxr                 - copy file to clipboard 'cpxr ./file.txt'"
